@@ -381,17 +381,16 @@ to GitHub.</p>
 </div>
 <div id="exercise-2" class="section level3">
 <h3>Exercise 2</h3>
-<pre class="r"><code># uncomment and edit the code below
-#staff_long &lt;- ___ %&gt;%
-#  ___(
-#    cols = ___, 
-#    names_to = &quot;___&quot;,
-#    values_to = &quot;___&quot;
-#    )</code></pre>
+<pre class="r"><code>staff_long &lt;- staff %&gt;% 
+   pivot_longer(
+     cols = -faculty_type, 
+    names_to = &quot;Full-Time&quot;,
+    values_to = &quot;Graduate&quot;
+    )</code></pre>
 </div>
 <div id="exercise-3" class="section level3">
 <h3>Exercise 3</h3>
-<p><em>Remove this text and add your answer here.</em></p>
+<p><em>55 rows.</em></p>
 <pre class="r"><code># remove this comment and add your code here</code></pre>
 <p>Team member 2 should knit, stage &amp; commit, and push all changes
 to GitHub.</p>
