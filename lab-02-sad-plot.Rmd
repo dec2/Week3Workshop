@@ -40,8 +40,8 @@ Team member 2 should pull to download updates and begins here.
 staff_long <- staff %>% 
    pivot_longer(
      cols = -faculty_type, 
-    names_to = "Full-Time",
-    values_to = "Graduate"
+    names_to = "Year",
+    values_to = "Value"
     )
 ```
 
@@ -64,10 +64,13 @@ Team member 3 should pull to download updates and begins here.
 
 ### Exercise 4
 
-*Remove this text and add your answer here.*
+*The graph doesn't have any lines.*
 
 ```{r lineplot-1}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(aes(x = `Year`, y = Value, 
+             color = faculty_type)) +
+  geom_line()
 ```
 
 
@@ -76,7 +79,11 @@ Team member 3 should pull to download updates and begins here.
 *Remove this text and add your answer here.*
 
 ```{r lineplot-2}
-# remove this comment and add your code here
+staff_long %>%
+  ggplot(aes(x = `Year`, y = Value, 
+             color = faculty_type,
+             group = faculty_type)) +
+  geom_line()
 ```
 
 
