@@ -70,6 +70,10 @@ Team member 3 should pull to download updates and begins here.
 staff_long %>%
   ggplot(aes(x = `Year`, y = Value, 
              color = faculty_type)) +
+  labs(
+    x = "Year of Employment",
+    y = "Number of Graduates",
+    title = "Graduates per Year",) +
   geom_line()
 ```
 
@@ -83,6 +87,10 @@ staff_long %>%
   ggplot(aes(x = `Year`, y = Value, 
              color = faculty_type,
              group = faculty_type)) +
+  labs(
+    x = "Year of Employment",
+    y = "Number of Graduates",
+    title = "Graduates per Year",) +
   geom_line()
 ```
 
@@ -96,7 +104,7 @@ Next team member should pull to download updates and continue from here.
 
 ### Exercise 6
 
-*Remove this text and add your answer here.*
+#exercise 4 has no graph
 
 ```{r lineplot-3}
 # remove this comment and add your code here
